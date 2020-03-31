@@ -19,21 +19,21 @@
             android:orientation="vertical">
 
             <RadioButton
-                android:id="@+id/radioButton"
+                android:id="@+id/radioButtonTransport"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Transport"
                 android:textColor="@android:color/white" />
 
             <RadioButton
-                android:id="@+id/radioButton2"
+                android:id="@+id/radioButtonSplit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Split"
                 android:textColor="@android:color/white" />
 
             <RadioButton
-                android:id="@+id/radioButton3"
+                android:id="@+id/radioButtonRTSP"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="RTSP"
@@ -41,6 +41,7 @@
 
 
             <LinearLayout
+                android:id="@+id/LinearLayoutTransport"
                 android:layout_width="match_parent"
                 android:layout_height="225dp"
                 android:orientation="vertical">
@@ -89,7 +90,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:backgroundTint="@android:color/white"
-                        android:hint="please enter SDP "
+                        android:hint="please enter SDP"
                         android:textColor="@android:color/white"
                         android:textSize="@dimen/size_text" />
                 </LinearLayout>
