@@ -4,29 +4,156 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="1dp">
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="296dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Transport"
+                android:textColor="@android:color/white" />
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Split"
+                android:textColor="@android:color/white" />
+
+            <RadioButton
+                android:id="@+id/radioButton3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RTSP"
+                android:textColor="@android:color/white" />
 
 
-        <SurfaceView
-            android:id="@+id/surface_view"
-            android:layout_width="match_parent"
-            android:layout_height="362dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="225dp"
+                android:orientation="vertical">
 
-        <Button
-            android:id="@+id/playButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="play"
-            android:text="Play" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/ipText"
+                        android:layout_width="74dp"
+                        android:layout_height="match_parent"
+
+                        android:text="   ip:"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/size_text" />
+
+                    <EditText
+                        android:id="@+id/ipInputText"
+                        android:layout_width="221dp"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@android:color/white"
+                        android:hint="please enter ip "
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/size_text" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/sdpText"
+                        android:layout_width="140dp"
+                        android:layout_height="match_parent"
+                        android:text="    SDP:"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/size_text" />
+
+                    <EditText
+                        android:id="@+id/sdpInputText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@android:color/white"
+                        android:hint="please enter SDP "
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/size_text" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonUdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="UDP"
+                        android:textColor="@android:color/white" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonTcp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TCP"
+                        android:textColor="@android:color/white" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/stopButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/stop_button" />
+
+
+                <ImageView
+                    android:id="@+id/playButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="play"
+                    android:src="@drawable/play_button"
+
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="662dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+
+            <SurfaceView
+                android:id="@+id/surface_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

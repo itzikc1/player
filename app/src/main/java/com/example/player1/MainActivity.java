@@ -7,13 +7,14 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     private SurfaceView surfaceViewLay;
     private SurfaceHolder surfaceHolder;
-    private Button play;
+    private ImageView play;
     // Used to load the 'native-lib' library on application startup.
     static {
         System.loadLibrary("native-lib");
@@ -26,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         surfaceViewLay = findViewById(R.id.surface_view);
-//        surfaceViewLay.getHolder().setFixedSize(1280, 720);
         surfaceHolder = surfaceViewLay.getHolder();
 
     }
