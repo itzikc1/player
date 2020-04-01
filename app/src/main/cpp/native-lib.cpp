@@ -109,6 +109,7 @@ Java_com_example_player1_Player_playVideo(JNIEnv *env, jobject thiz, jobject sur
      void *m_VidDisp1=0;
    ANativeWindow_Buffer window_buffer;
    speedlive_setup_t setup={0};
+    setup.hw_acc = 1;
 //    // TODO: implement playVideo()
     native_window = ANativeWindow_fromSurface(env, surface);
      m_speedlive = speedlive_get_handle();
